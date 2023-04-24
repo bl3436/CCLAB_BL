@@ -41,14 +41,16 @@ a {
 }
 
 .box {
-  padding-top: 220px;
-  margin-right: 360px;
-  margin-left: 360px;
-  padding-bottom: 195px;
+  padding-top: 20%;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-bottom: 13%;
   border-width: 20px;
   border-style: dotted;
   border-color: aqua;
+
 }
+
 
 .title {
   font-size: 2.9em;
