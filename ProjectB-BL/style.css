@@ -11,9 +11,9 @@ canvas {
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background-image: url("./hearts.jpg");
+  background-image: url(/assets/heartbackground.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+
 }
 
 #content-box {
