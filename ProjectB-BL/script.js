@@ -1,84 +1,70 @@
-let startSketch = false;
-let heart;
-let counter;
-let scene;
-let color = 0;
 function setup() {
+  createCanvas(windowWidth, windowHeight);
 
-  let cnv = createCanvas(1495, 715);
-  cnv.parent("canvasContainer");
-  background(255);
-  heart = new Heart(610, 150);
-  heart.display();
 }
+
 function draw() {
-  if (startSketch == true) {
-    background(255);
-    heart.display();
-    textFont('Comic Neue');
-    textSize(40);
-
-    if (counter < 5) {
-      text("loading", 670, 310);
-      fill(0);
-
-      if (scene >= 0) {
-        circle(810, 310, 5);
-      }
-      if (scene >= 20) {
-        circle(825, 310, 5);
-      }
-      if (scene >= 40) {
-        circle(840, 310, 5);
-      }
-      if (scene == 60) {
-        scene = -20;
-        counter += 1;
-      }
-    }
-    scene += 1;
-    if (scene > 100) {
-      textAlign(CENTER);
-      text("calculation complete", 725, 250, 70, 140);
-    }
-  }
+  background('gray');
+  heartArr.forEach(function (r) {
+    r.createHeart();
+    r.move();
+  });
 }
-function start() {
-  startSketch = true;
-  counter = 0;
-  scene = 0;
-}
+
 class Heart {
-  constructor(startX, startY) {
-    this.x = startX;
-    this.y = startY;
-  }
-  display() {
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+    this.mx = random(0, width);
+    this.my = random(0, height);
+    this.speedRange = [-2, -1, 1, 2];
+    this.xSpeed = random(this.speedRange);
+    this.ySpeed = random(this.speedRange);
+    this.size = random(55);
+    this.degree = random(10);
 
+  }
+
+  createHeart() {
     push();
-    fill(255, 0, 0);
-    translate(this.x, this.y);
+    translate(this.mx, this.my);
+    rotate(PI * this.degree);
+    noStroke();
+    noSmooth();
+    fill(255, 192, 203);
     beginShape();
-    curveVertex(150, 600);
-    curveVertex(150, 270);
-    curveVertex(30, 150);
-    curveVertex(75, 75);
-    curveVertex(150, 100);
-    curveVertex(150, 300);
-    endShape();
-    beginShape();
-    curveVertex(150, 300);
-    curveVertex(150, 100);
-    curveVertex(225, 75);
-    curveVertex(270, 150);
-    curveVertex(150, 270);
-    curveVertex(150, 600);
-    endShape();
+    vertex(this.x, this.y);
+    bezierVertex(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);
+    bezierVertex(this.x + this.size, this.y + this.size / 3, this.x + this.size / 2, this.y - this.size / 2, this.x, this.y);
+    endShape(CLOSE);
     pop();
   }
 
+  move() {
+    if (this.mx < 0 || this.mx > width) {
+      this.xSpeed *= -1;
+    }
+    if (this.my < 0 || this.my > height) {
+      this.ySpeed *= -1;
+    }
+
+    this.mx += this.xSpeed;
+    this.my += this.ySpeed;
+    this.degree = this.degree + 0.01;
+  }
 }
 
+let heartArr = [];
+function setup() {
+  var w = window.innerWidth
+  var h = window.innerHeight
+  createCanvas(w, h);
+
+  for (i = 0; i < 150; i++) {
+    heartArr.push(new Heart());
+  }
+}
+/*calculation*/
 window.onload = function () {
   let button = document.getElementById("calculate");
   button.addEventListener("click", calculateLove);
@@ -89,9 +75,7 @@ function calculateLove() {
   let crushName = document.getElementById("crush-name").value;
 
   if (yourName != "" && crushName != "") {
-    let percentage = Math.floor(Math.random() * 101); //0-.99999
-    // percentage = 3;
-
+    let percentage = Math.floor(Math.random() * 101);
     document.getElementById("result-message").innerText = yourName + " and " + crushName + "'s chance of love:";
     document.getElementById("result-percentage").innerText = percentage.toString() + "%";
   }

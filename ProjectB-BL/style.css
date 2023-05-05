@@ -6,38 +6,40 @@ body {
 
 canvas {
   display: block;
+  position: absolute;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
-  background-image: url(/assets/heartbackground.jpg);
-  background-size: cover;
+  background-color: gray;
 
 }
 
 #content-box {
-  width: 400px;
-  height: 500px;
+  width: 600px;
+  height: 300px;
   background-color: whitesmoke;
   padding: 20px;
   margin: 0 auto;
-  margin-top: 50px;
-  border-radius: 10px;
-
+  margin-top: 100px;
+  border-radius: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 #calculate {
   width: 150px;
   height: 50px;
-
   background-color: pink;
-  color: white;
+  color: black;
   font-size: 20px;
   border: none;
   border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 #result-percentage {
-  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
 }
