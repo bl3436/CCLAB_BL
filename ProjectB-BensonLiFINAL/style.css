@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(211, 211, 211);
+
+}
+
+canvas {
+  display: block;
+}
+
+#p5-canvas-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+}
+
+.calc {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+
+}
+
+#result {
+  color: black;
+  font-size: 45px;
+  text-shadow: 1px 1px 1px #646161;
+  text-align: center;
+  height: 150px;
+}
+
+h2 {
+  font-size: 45px;
+}

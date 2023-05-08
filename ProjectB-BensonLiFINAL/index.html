@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Your Percentage?</title>
+  <!-- link the styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- import the libraries -->
+  <script src="lib/p5.js"></script>
+  <script src="lib/p5.sound.js"></script>
+</head>
+
+<body>
+  <div id="p5-canvas-container"></div>
+  <div class="calc">
+    <h2>What's Your Percentage?</h2>
+    <h5>More Information</h5>
+    <form role="form" class="form-horizontal">
+      <div class="form-group">
+        <input type="text" class="form-control" name="names" placeholder="Name One" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="names" placeholder="Name Two" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-danger pull-right" type="submit" id="submit">Calculate</button>
+      </div>
+    </form>
+    <p id="warning" class="text-danger"></p>
+    <h1 id="result" class="text-center"></h1>
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
