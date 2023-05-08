@@ -19,9 +19,9 @@ canvas {
 
 .calc {
   position: absolute;
-  width: 400px;
+  width: 200px;
   height: 400px;
-  left: calc(50% - 200px);
+  left: calc(50% - 100px);
   top: calc(50% - 200px);
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
