@@ -1,5 +1,11 @@
 let heartArr = [];
-let rickroll;
+let rickRoll;
+function preload() {
+  rickRoll = loadSound("sound/Rick Roll Sound Effect.mp3");
+}
+function playAudio() {
+  rickRoll.play();
+}
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("p5-canvas-container");
@@ -119,9 +125,10 @@ function calculate() {
 document.getElementById('submit').addEventListener('click', function (e) {
   e.preventDefault();
   calculate();
-  play.rickroll();
 }, false);
 
-function preload() {
-  rickroll = loadSound("Rick Roll Sound Effect.mp3");
-}
+
+
+
+
+
