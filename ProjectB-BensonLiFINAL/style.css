@@ -40,3 +40,9 @@ canvas {
 h2 {
   font-size: 45px;
 }
+
+a {
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}
