@@ -33,7 +33,7 @@ class Heart {
     this.speedRange = [-2, -1, 1, 2];
     this.xSpeed = random(this.speedRange);
     this.ySpeed = random(this.speedRange);
-    this.size = random(100);
+    this.size = random(120);
     this.degree = random(50);
   }
 
