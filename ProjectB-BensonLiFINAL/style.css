@@ -31,18 +31,19 @@ canvas {
 
 #result {
   color: black;
-  font-size: 45px;
+  font-size: 40px;
   text-shadow: 1px 1px 1px #646161;
   text-align: center;
   height: 150px;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 a {
   text-decoration: none;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: black;
+  font-size: 20px;
 }
