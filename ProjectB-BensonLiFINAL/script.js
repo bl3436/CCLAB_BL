@@ -17,7 +17,7 @@ function preload() {
 }
 
 function draw() {
-  background(211, 211, 211);
+  background('red');
   heartArr.forEach(function (r) {
     r.createHeart();
     r.move();
@@ -33,7 +33,7 @@ class Heart {
     this.speedRange = [-2, -1, 1, 2];
     this.xSpeed = random(this.speedRange);
     this.ySpeed = random(this.speedRange);
-    this.size = random(70);
+    this.size = random(100);
     this.degree = random(50);
   }
 
@@ -42,7 +42,7 @@ class Heart {
     translate(this.mx, this.my);
     rotate(PI * this.degree);
     noSmooth();
-    fill(255, 192, 203);
+    fill(255, 105, 180);
     beginShape();
     vertex(this.x, this.y);
     bezierVertex(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);

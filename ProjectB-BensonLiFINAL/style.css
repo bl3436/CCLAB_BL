@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(211, 211, 211);
+  background-color: red;
 
 }
 
@@ -20,9 +20,9 @@ canvas {
 .calc {
   position: absolute;
   width: 200px;
-  height: 400px;
+  height: 600px;
   left: calc(50% - 100px);
-  top: calc(50% - 200px);
+  top: calc(50% - 300px);
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20px;
@@ -31,14 +31,15 @@ canvas {
 
 #result {
   color: black;
-  font-size: 40px;
+  font-size: 45px;
   text-shadow: 1px 1px 1px #646161;
   text-align: center;
   height: 150px;
 }
 
 h2 {
-  font-size: 40px;
+  text-align: center;
+  font-size: 45px;
 }
 
 a {
